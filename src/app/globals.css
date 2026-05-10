@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #f5f5f5;
+}
+
+@theme inline {
+  --color-background: #050505;
+  --color-foreground: #f5f5f5;
+  --color-maia-black: #050505;
+  --color-maia-carbon: #0b0b0f;
+  --color-maia-ink: #121218;
+  --color-maia-purple: #5b21b6;
+  --color-maia-violet: #6d28d9;
+  --color-maia-wine: #3b0a45;
+  --color-maia-white: #f5f5f5;
+  --color-maia-muted: #a1a1aa;
+  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  background:
+    radial-gradient(circle at 78% 4%, rgba(91, 33, 182, 0.2), transparent 30rem),
+    linear-gradient(180deg, #050505 0%, #070708 44%, #050505 100%);
+  color: var(--foreground);
+}
+
+::selection {
+  background: rgba(109, 40, 217, 0.72);
+  color: #ffffff;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.maia-container {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.maia-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
