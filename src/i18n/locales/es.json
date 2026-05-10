@@ -106,6 +106,53 @@
       }
     ]
   },
+  "offSociety": {
+    "label": "MAIA Community Layer",
+    "title": "MAIA OFF Society",
+    "primaryText": "Para quienes están construyendo algo grande mientras intentan entenderse a sí mismos.",
+    "secondaryText": "Ideas, señales y conversaciones para una generación que aprendió a verse bien antes de sentirse bien.",
+    "cta": "Step Inside",
+    "nextCta": "Next Signal",
+    "resetCta": "Back to the room",
+    "caption": "Una sala privada dentro de MAIA. Menos ruido. Más dirección.",
+    "signalLabel": "OFF Signal",
+    "signalCaption": "Avanza lento. Cada señal está diseñada para quedarse un momento.",
+    "signals": [
+      {
+        "title": "Se ve bien… pero se siente OFF.",
+        "text": "Hay personas que parecen avanzar todo el tiempo… y aun así sienten que algo no conecta."
+      },
+      {
+        "title": "La productividad sin dirección también cansa.",
+        "text": "No todo agotamiento viene del trabajo. A veces viene de construir sin claridad."
+      },
+      {
+        "title": "No estás atrasado. Estás saturado.",
+        "text": "Vivimos expuestos a demasiadas vidas, demasiadas metas y demasiada presión al mismo tiempo."
+      },
+      {
+        "title": "El problema no siempre es falta de talento.",
+        "text": "A veces es exceso de ruido, comparación y expectativas imposibles de sostener."
+      },
+      {
+        "title": "OFF no siempre significa perdido.",
+        "text": "A veces significa que ya no puedes seguir creciendo desde la inercia."
+      },
+      {
+        "title": "Construir también debería sentirse tuyo.",
+        "text": "MAIA OFF Society nace para quienes quieren crecer sin perderse en el proceso."
+      }
+    ],
+    "join": {
+      "label": "Private Signal",
+      "title": "Join the weekly signal.",
+      "text": "Señales semanales sobre ambición, dirección, negocio, identidad y crecimiento en una generación que intenta construir mientras aprende quién es.",
+      "placeholder": "Email",
+      "cta": "Join",
+      "success": "Signal received. We will keep it quiet.",
+      "caption": "Una invitación mínima. Sin ruido innecesario."
+    }
+  },
   "newsletter": {
     "eyebrow": "Intelligence",
     "title": "MAIA Intelligence Weekly",

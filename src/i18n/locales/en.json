@@ -73,6 +73,35 @@
       { "slug": "suut", "name": "SUUT", "category": "Technical company / digital presence / commercial structure", "description": "Digital presence and communication structure for a company selling, servicing and maintaining power generation equipment.", "services": ["Digital strategy", "Commercial communication", "Brand structure", "Growth Systems"], "result": "A more professional presence to communicate trust, technical capability and service." }
     ]
   },
+  "offSociety": {
+    "label": "MAIA Community Layer",
+    "title": "MAIA OFF Society",
+    "primaryText": "For those building something big while trying to understand themselves.",
+    "secondaryText": "Ideas, signals and conversations for a generation that learned to look well before feeling well.",
+    "cta": "Step Inside",
+    "nextCta": "Next Signal",
+    "resetCta": "Back to the room",
+    "caption": "A private room inside MAIA. Less noise. More direction.",
+    "signalLabel": "OFF Signal",
+    "signalCaption": "Move slowly. Each signal is designed to stay for a moment.",
+    "signals": [
+      { "title": "It looks good… but it feels OFF.", "text": "Some people seem to be moving all the time… and still feel that something does not connect." },
+      { "title": "Productivity without direction is also exhausting.", "text": "Not all exhaustion comes from work. Sometimes it comes from building without clarity." },
+      { "title": "You are not behind. You are saturated.", "text": "We live exposed to too many lives, too many goals and too much pressure at once." },
+      { "title": "The problem is not always lack of talent.", "text": "Sometimes it is too much noise, comparison and impossible expectations to sustain." },
+      { "title": "OFF does not always mean lost.", "text": "Sometimes it means you can no longer keep growing from inertia." },
+      { "title": "Building should also feel like yours.", "text": "MAIA OFF Society exists for those who want to grow without losing themselves in the process." }
+    ],
+    "join": {
+      "label": "Private Signal",
+      "title": "Join the weekly signal.",
+      "text": "Weekly signals on ambition, direction, business, identity and growth for a generation trying to build while learning who they are.",
+      "placeholder": "Email",
+      "cta": "Join",
+      "success": "Signal received. We will keep it quiet.",
+      "caption": "A minimal invitation. No unnecessary noise."
+    }
+  },
   "newsletter": {
     "eyebrow": "Intelligence",
     "title": "MAIA Intelligence Weekly",

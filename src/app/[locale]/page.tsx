@@ -2,6 +2,7 @@ import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { IntelligenceWeekly } from "@/components/sections/IntelligenceWeekly";
 import { Method } from "@/components/sections/Method";
+import { OffSociety } from "@/components/sections/OffSociety";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { Services } from "@/components/sections/Services";
 import { WhyMaia } from "@/components/sections/WhyMaia";
@@ -28,6 +29,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
       <Services dictionary={dictionary.services} />
       <Method dictionary={dictionary.method} />
       <Portfolio locale={locale} dictionary={dictionary.portfolio} />
+      <OffSociety dictionary={dictionary.offSociety} />
       <IntelligenceWeekly locale={locale} dictionary={dictionary.newsletter} />
       <WhyMaia dictionary={dictionary.whyMaia} />
       <Contact dictionary={dictionary.contact} />
