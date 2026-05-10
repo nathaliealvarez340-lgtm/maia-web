@@ -51,18 +51,18 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
       id="off-society"
       className="relative overflow-hidden bg-maia-black py-24 sm:py-32"
     >
-      <div className="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-maia-wine/18 blur-[150px]" />
+      <div className="absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-maia-wine/8 blur-[150px]" />
       <div className="maia-container relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-h-[620px] overflow-hidden rounded-lg border border-white/10 bg-maia-carbon shadow-[0_0_90px_rgba(91,33,182,0.14)] sm:min-h-[700px]"
+          className="relative min-h-[620px] overflow-hidden rounded-lg border border-white/10 bg-maia-carbon shadow-[0_0_70px_rgba(59,10,69,0.1)] sm:min-h-[700px]"
         >
           {shouldLoadVideo ? (
             <video
-              className="absolute inset-0 h-full w-full scale-[1.03] object-cover opacity-48 blur-[1px]"
+              className="absolute inset-0 h-full w-full scale-[1.03] object-cover opacity-40 blur-[1px]"
               src={offSocietyVideoUrl}
               autoPlay
               muted
@@ -73,9 +73,9 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
             />
           ) : null}
 
-          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,5,5,0.92)_0%,rgba(5,5,5,0.72)_44%,rgba(59,10,69,0.34)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_18%,rgba(109,40,217,0.22),transparent_34%),linear-gradient(to_top,rgba(5,5,5,0.94),transparent_42%)]" />
-          <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-maia-violet/55 to-transparent" />
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,5,5,0.96)_0%,rgba(5,5,5,0.82)_48%,rgba(12,8,18,0.78)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(109,40,217,0.09),transparent_32%),linear-gradient(to_top,rgba(5,5,5,0.96),transparent_44%)]" />
+          <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-maia-violet/30 to-transparent" />
 
           <div className="relative z-10 flex min-h-[620px] flex-col justify-between p-6 sm:min-h-[700px] sm:p-10 lg:p-14">
             <div className="flex items-center justify-between gap-4">
@@ -95,17 +95,11 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
                 <motion.div
                   key="intro"
                   {...panelMotion}
-                  className="max-w-5xl py-20"
+                  className="max-w-4xl py-24 sm:py-28"
                 >
-                  <h2 className="text-balance text-5xl font-semibold leading-[0.9] text-maia-white sm:text-7xl lg:text-[7.2rem]">
+                  <h2 className="text-balance text-5xl font-semibold leading-[0.94] text-maia-white sm:text-6xl lg:text-[5.8rem]">
                     {dictionary.title}
                   </h2>
-                  <p className="mt-10 max-w-2xl text-balance text-2xl leading-tight text-maia-white sm:text-4xl">
-                    {dictionary.primaryText}
-                  </p>
-                  <p className="mt-7 max-w-xl text-base leading-8 text-maia-muted sm:text-lg">
-                    {dictionary.secondaryText}
-                  </p>
                 </motion.div>
               ) : null}
 
@@ -142,9 +136,12 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
                   <p className="mt-7 max-w-2xl text-lg leading-8 text-maia-muted">
                     {dictionary.join.text}
                   </p>
+                  <p className="mt-10 max-w-2xl text-balance text-2xl leading-tight text-maia-white sm:text-3xl">
+                    {dictionary.primaryText}
+                  </p>
                   <form
                     onSubmit={submitSignal}
-                    className="mt-10 flex max-w-xl flex-col gap-3 rounded-full border border-white/10 bg-black/30 p-2 backdrop-blur-md sm:flex-row"
+                    className="mt-12 flex max-w-xl flex-col gap-3 rounded-full border border-white/10 bg-black/30 p-2 backdrop-blur-md sm:flex-row"
                   >
                     <input
                       type="email"
