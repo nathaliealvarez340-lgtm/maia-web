@@ -1,22 +1,33 @@
 "use client";
 
-import { services } from "@/data/services";
+import { Blocks, Orbit, Workflow } from "lucide-react";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { type Dictionary } from "@/i18n/dictionary";
 
-export function Services() {
+const icons = {
+  orbit: Orbit,
+  blocks: Blocks,
+  workflow: Workflow,
+};
+
+type ServicesProps = {
+  dictionary: Dictionary["services"];
+};
+
+export function Services({ dictionary }: ServicesProps) {
   return (
     <section id="services" className="relative bg-maia-black py-24 sm:py-32">
       <div className="maia-container">
         <SectionHeader
-          eyebrow="Services"
-          title="Integrated strategy for brands that need more than aesthetics."
-          description="MAIA connects identity, operating clarity and growth infrastructure so the business can move with sharper decisions and fewer improvised systems."
+          eyebrow={dictionary.eyebrow}
+          title={dictionary.title}
+          description={dictionary.description}
         />
 
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {services.map((service) => {
-            const Icon = service.icon;
+          {dictionary.items.map((service) => {
+            const Icon = icons[service.icon as keyof typeof icons] ?? Orbit;
 
             return (
               <GlowCard key={service.title} className="min-h-[286px]">

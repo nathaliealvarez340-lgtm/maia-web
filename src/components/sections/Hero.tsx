@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
 import { SplineScene } from "@/components/ui/SplineScene";
+import { type Dictionary } from "@/i18n/dictionary";
 
-export function Hero() {
+type HeroProps = {
+  dictionary: Dictionary["hero"];
+};
+
+export function Hero({ dictionary }: HeroProps) {
   return (
     <section
       id="home"
@@ -21,24 +26,23 @@ export function Hero() {
           className="max-w-4xl"
         >
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.3em] text-maia-muted">
-            Branding | Business Architecture | Growth Systems
+            {dictionary.eyebrow}
           </p>
           <h1 className="text-balance text-5xl font-semibold uppercase leading-[0.92] tracking-normal text-maia-white sm:text-7xl lg:text-[6.9rem]">
-            Strategy that designs.
+            {dictionary.lineOne}
             <span className="block text-maia-violet drop-shadow-[0_0_28px_rgba(109,40,217,0.42)]">
-              Systems that scale.
+              {dictionary.lineTwo}
             </span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-maia-muted sm:text-xl">
-            We build brands, structures and growth systems for businesses ready
-            to stop improvising.
+            {dictionary.description}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="#contact" showIcon>
-              Start a project
+              {dictionary.primaryCta}
             </ButtonLink>
             <ButtonLink href="#services" variant="secondary">
-              Explore services
+              {dictionary.secondaryCta}
             </ButtonLink>
           </div>
         </motion.div>

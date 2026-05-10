@@ -5,17 +5,15 @@ import { Send } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { contactSchema, type ContactFormValues } from "@/lib/validations";
+import { type Dictionary } from "@/i18n/dictionary";
 import { cn } from "@/lib/utils";
+import { contactSchema, type ContactFormValues } from "@/lib/validations";
 
-const serviceOptions = [
-  "Brand & Identity",
-  "Business Architecture",
-  "Growth Systems",
-  "Integrated MAIA System",
-];
+type ContactProps = {
+  dictionary: Dictionary["contact"];
+};
 
-export function Contact() {
+export function Contact({ dictionary }: ContactProps) {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const {
     register,
@@ -55,9 +53,9 @@ export function Contact() {
     <section id="contact" className="bg-maia-carbon py-24 sm:py-32">
       <div className="maia-container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <SectionHeader
-          eyebrow="Contact"
-          title="For businesses ready to build with more intention."
-          description="Send the signal. MAIA will review the context and respond with the clearest next step."
+          eyebrow={dictionary.eyebrow}
+          title={dictionary.title}
+          description={dictionary.description}
         />
 
         <form
@@ -65,26 +63,35 @@ export function Contact() {
           className="rounded-lg border border-white/10 bg-maia-black/70 p-5 shadow-[0_0_80px_rgba(91,33,182,0.14)] backdrop-blur sm:p-8"
         >
           <div className="grid gap-5 sm:grid-cols-2">
-            <Field label="Name" error={errors.name?.message}>
+            <Field label={dictionary.fields.name} error={errors.name?.message}>
               <input {...register("name")} className={inputClass} />
             </Field>
-            <Field label="Company" error={errors.company?.message}>
+            <Field
+              label={dictionary.fields.company}
+              error={errors.company?.message}
+            >
               <input {...register("company")} className={inputClass} />
             </Field>
           </div>
 
           <div className="mt-5 grid gap-5 sm:grid-cols-2">
-            <Field label="Email" error={errors.email?.message}>
+            <Field
+              label={dictionary.fields.email}
+              error={errors.email?.message}
+            >
               <input
                 {...register("email")}
                 type="email"
                 className={inputClass}
               />
             </Field>
-            <Field label="Service of interest" error={errors.service?.message}>
+            <Field
+              label={dictionary.fields.service}
+              error={errors.service?.message}
+            >
               <select {...register("service")} className={inputClass}>
-                <option value="">Select one</option>
-                {serviceOptions.map((service) => (
+                <option value="">{dictionary.selectPlaceholder}</option>
+                {dictionary.services.map((service) => (
                   <option key={service} value={service}>
                     {service}
                   </option>
@@ -94,7 +101,10 @@ export function Contact() {
           </div>
 
           <div className="mt-5">
-            <Field label="Message" error={errors.message?.message}>
+            <Field
+              label={dictionary.fields.message}
+              error={errors.message?.message}
+            >
               <textarea
                 {...register("message")}
                 rows={6}
@@ -109,19 +119,15 @@ export function Contact() {
               disabled={isSubmitting}
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-maia-violet/70 bg-maia-violet px-5 text-sm font-semibold text-white shadow-[0_0_34px_rgba(91,33,182,0.42)] transition duration-300 hover:bg-maia-purple disabled:cursor-not-allowed disabled:opacity-60"
             >
-              <span>{isSubmitting ? "Sending..." : "Send inquiry"}</span>
+              <span>{isSubmitting ? dictionary.sending : dictionary.submit}</span>
               <Send className="size-4" />
             </button>
 
             {status === "success" ? (
-              <p className="text-sm text-maia-white">
-                Inquiry sent. MAIA will be in touch.
-              </p>
+              <p className="text-sm text-maia-white">{dictionary.success}</p>
             ) : null}
             {status === "error" ? (
-              <p className="text-sm text-red-300">
-                The inquiry could not be sent. Check the server configuration.
-              </p>
+              <p className="text-sm text-red-300">{dictionary.error}</p>
             ) : null}
           </div>
         </form>
@@ -145,7 +151,9 @@ function Field({
         {label}
       </span>
       {children}
-      {error ? <span className="mt-2 block text-xs text-red-300">{error}</span> : null}
+      {error ? (
+        <span className="mt-2 block text-xs text-red-300">{error}</span>
+      ) : null}
     </label>
   );
 }

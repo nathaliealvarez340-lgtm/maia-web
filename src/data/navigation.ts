@@ -1,6 +1,8 @@
-export const navigationItems = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Method", href: "#method" },
-  { label: "Contact", href: "#contact" },
-];
+export const navigationAnchors = [
+  "home",
+  "services",
+  "method",
+  "portfolio",
+  "intelligence",
+  "contact",
+] as const;

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
-import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,14 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MAIA | Strategy that designs. Systems that scale.",
+  title: "MAIA | Branding, Business Architecture & Growth Systems",
   description:
-    "Branding, business architecture and growth systems for businesses ready to stop improvising.",
-  metadataBase: new URL("https://maia.studio"),
-  openGraph: {
-    title: "MAIA",
-    description: "Strategy that designs. Systems that scale.",
-    type: "website",
+    "MAIA construye marcas, estructuras de negocio y sistemas de crecimiento para empresas listas para dejar de improvisar.",
+  keywords: [
+    "branding",
+    "business architecture",
+    "growth systems",
+    "estrategia de marca",
+    "automatización",
+    "sistemas de crecimiento",
+    "consultoría estratégica",
+    "MAIA",
+  ],
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 
@@ -33,13 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth`}
     >
       <body className="flex min-h-full flex-col bg-maia-black font-sans text-maia-white antialiased">
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
