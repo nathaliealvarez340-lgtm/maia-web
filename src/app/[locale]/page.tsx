@@ -4,7 +4,6 @@ import { IntelligenceWeekly } from "@/components/sections/IntelligenceWeekly";
 import { Method } from "@/components/sections/Method";
 import { OffSociety } from "@/components/sections/OffSociety";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Services } from "@/components/sections/Services";
 import { StructureReveal } from "@/components/sections/StructureReveal";
 import { WhyMaia } from "@/components/sections/WhyMaia";
 import { isLocale } from "@/i18n/config";
@@ -27,8 +26,10 @@ export default async function LocalePage({ params }: LocalePageProps) {
   return (
     <main>
       <Hero dictionary={dictionary.hero} />
-      <StructureReveal dictionary={dictionary.structureReveal} />
-      <Services dictionary={dictionary.services} />
+      <StructureReveal
+        dictionary={dictionary.structureReveal}
+        services={dictionary.services}
+      />
       <Method dictionary={dictionary.method} />
       <Portfolio locale={locale} dictionary={dictionary.portfolio} />
       <OffSociety dictionary={dictionary.offSociety} />
