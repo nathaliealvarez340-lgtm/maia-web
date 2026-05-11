@@ -18,6 +18,7 @@ type ServicesProps = {
 export function Services({ dictionary }: ServicesProps) {
   return (
     <section id="services" className="relative bg-maia-black py-24 sm:py-32">
+      <span id="builds" className="absolute -top-20" aria-hidden="true" />
       <div className="maia-container">
         <SectionHeader
           eyebrow={dictionary.eyebrow}

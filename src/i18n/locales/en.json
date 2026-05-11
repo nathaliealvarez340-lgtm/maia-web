@@ -40,6 +40,13 @@
     "primaryCta": "Start a project",
     "secondaryCta": "Explore services"
   },
+  "structureReveal": {
+    "lineOne": "Your business doesn't need more ideas.",
+    "lineTwoPrefix": "It needs",
+    "highlight": "structure",
+    "button": "What we build",
+    "microcopy": "From scattered ideas to scalable systems."
+  },
   "services": {
     "eyebrow": "What MAIA builds",
     "title": "What MAIA builds",

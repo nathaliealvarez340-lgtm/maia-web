@@ -40,6 +40,13 @@
     "primaryCta": "Iniciar projeto",
     "secondaryCta": "Explorar serviços"
   },
+  "structureReveal": {
+    "lineOne": "O seu negócio não precisa de mais ideias.",
+    "lineTwoPrefix": "Precisa de",
+    "highlight": "estrutura",
+    "button": "O que construímos",
+    "microcopy": "Da ideia dispersa ao sistema que escala."
+  },
   "services": {
     "eyebrow": "O que a MAIA constrói",
     "title": "O que a MAIA constrói",
