@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { offSocietyVideoUrl } from "@/data/offSociety";
 import { type Dictionary } from "@/i18n/dictionary";
 
@@ -15,6 +15,7 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const shouldLoadVideo = useInView(sectionRef, {
     once: true,
     margin: "240px",
@@ -22,6 +23,12 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
 
   const activeSignal = typeof step === "number" ? dictionary.signals[step] : null;
   const signalIndex = typeof step === "number" ? step : -1;
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 1.25;
+    }
+  }, [shouldLoadVideo]);
 
   function nextSignal() {
     if (step === "intro") {
@@ -51,31 +58,34 @@ export function OffSociety({ dictionary }: OffSocietyProps) {
       id="off-society"
       className="relative overflow-hidden bg-maia-black py-24 sm:py-32"
     >
-      <div className="absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-maia-wine/8 blur-[150px]" />
+      {shouldLoadVideo ? (
+        <video
+          ref={videoRef}
+          className="absolute inset-0 h-full w-full scale-[1.04] object-cover opacity-42 blur-[8px] sm:blur-[12px]"
+          src={offSocietyVideoUrl}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden="true"
+        />
+      ) : null}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,5,0.94)_0%,rgba(5,5,5,0.74)_44%,rgba(5,5,5,0.96)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_24%,rgba(109,40,217,0.12),transparent_34%),radial-gradient(circle_at_20%_80%,rgba(59,10,69,0.1),transparent_36%)]" />
+      <div className="absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/20 blur-[130px]" />
       <div className="maia-container relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="relative min-h-[620px] overflow-hidden rounded-lg border border-white/10 bg-maia-carbon shadow-[0_0_70px_rgba(59,10,69,0.1)] sm:min-h-[700px]"
+          className="relative min-h-[620px] overflow-hidden rounded-lg border border-white/12 bg-black/42 shadow-[0_30px_110px_rgba(0,0,0,0.42)] backdrop-blur-2xl sm:min-h-[700px]"
         >
-          {shouldLoadVideo ? (
-            <video
-              className="absolute inset-0 h-full w-full scale-[1.03] object-cover opacity-40 blur-[1px]"
-              src={offSocietyVideoUrl}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-hidden="true"
-            />
-          ) : null}
-
-          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,5,5,0.96)_0%,rgba(5,5,5,0.82)_48%,rgba(12,8,18,0.78)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(109,40,217,0.09),transparent_32%),linear-gradient(to_top,rgba(5,5,5,0.96),transparent_44%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(5,5,5,0.72)_0%,rgba(5,5,5,0.54)_48%,rgba(12,8,18,0.46)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(109,40,217,0.08),transparent_34%),linear-gradient(to_top,rgba(5,5,5,0.82),transparent_48%)]" />
           <div className="absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-maia-violet/30 to-transparent" />
+          <div className="absolute inset-0 rounded-lg ring-1 ring-maia-violet/10" />
 
           <div className="relative z-10 flex min-h-[620px] flex-col justify-between p-6 sm:min-h-[700px] sm:p-10 lg:p-14">
             <div className="flex items-center justify-between gap-4">
