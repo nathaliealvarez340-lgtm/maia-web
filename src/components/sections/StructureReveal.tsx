@@ -39,37 +39,37 @@ export function StructureReveal({
   );
   const phraseIntroOpacity = useTransform(
     scrollYProgress,
-    [0, 0.04, 0.34, 0.42],
+    [0, 0.04, 0.36, 0.43],
     [0, 1, 1, 0],
   );
   const phraseIntroScale = useTransform(
     scrollYProgress,
-    [0, 0.18, 0.34, 0.42],
+    [0, 0.18, 0.36, 0.43],
     prefersReducedMotion ? [1, 1, 1, 1] : [0.96, 1.18, 1.9, 2.06],
   );
   const phraseIntroY = useTransform(
     scrollYProgress,
-    [0, 0.34, 0.42],
+    [0, 0.36, 0.43],
     prefersReducedMotion ? [0, 0, 0] : [18, -8, -28],
   );
   const servicesOpacity = useTransform(
     scrollYProgress,
-    [0.38, 0.45, 0.72, 0.8],
+    [0.44, 0.52, 0.74, 0.82],
     [0, 1, 1, 0],
   );
   const servicesY = useTransform(
     scrollYProgress,
-    [0.38, 0.45, 0.72, 0.8],
+    [0.44, 0.52, 0.74, 0.82],
     prefersReducedMotion ? [0, 0, 0, 0] : [80, 0, 0, -60],
   );
   const phraseReturnOpacity = useTransform(
     scrollYProgress,
-    [0.82, 0.92],
+    [0.84, 0.94],
     [0, 1],
   );
   const phraseReturnScale = useTransform(
     scrollYProgress,
-    [0.82, 1],
+    [0.84, 1],
     prefersReducedMotion ? [1, 1] : [1.02, 1.14],
   );
   const finalCtaOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);

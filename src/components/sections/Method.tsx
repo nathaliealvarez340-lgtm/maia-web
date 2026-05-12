@@ -34,20 +34,22 @@ export function Method({ dictionary }: MethodProps) {
                 duration: 0.55,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative rounded-lg border border-white/10 bg-white/[0.035] p-6 backdrop-blur"
+              className="relative min-h-[310px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.035] p-6 backdrop-blur"
             >
               {index < dictionary.steps.length - 1 ? (
                 <div className="absolute left-[calc(100%-0.25rem)] top-10 hidden h-px w-5 bg-maia-violet/50 lg:block" />
               ) : null}
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-maia-violet">
-                0{index + 1} / {step.phase}
-              </p>
-              <h3 className="mt-9 text-2xl font-semibold text-maia-white">
-                {step.title}
-              </h3>
-              <p className="mt-4 leading-7 text-maia-muted">
-                {step.description}
-              </p>
+              <span className="pointer-events-none absolute -right-4 top-5 z-0 text-[8rem] font-bold leading-none text-maia-violet/10 sm:text-[9rem] lg:-right-6 lg:text-[8.5rem]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="relative z-10 flex min-h-[260px] flex-col justify-end">
+                <h3 className="text-2xl font-semibold text-maia-white">
+                  {step.title}
+                </h3>
+                <p className="mt-4 leading-7 text-maia-muted">
+                  {step.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

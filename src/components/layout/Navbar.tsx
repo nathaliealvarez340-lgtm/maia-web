@@ -18,8 +18,8 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-maia-black/72 backdrop-blur-xl">
-      <nav className="maia-container flex h-16 items-center justify-between gap-3">
+    <header className="fixed inset-x-0 top-5 z-50 px-3">
+      <nav className="mx-auto flex h-14 w-full max-w-[1120px] items-center justify-between gap-3 rounded-full border border-white/10 bg-maia-black/72 px-4 shadow-[0_18px_70px_rgba(59,10,69,0.16)] backdrop-blur-xl sm:px-5">
         <a
           href="#home"
           aria-label="MAIA home"
@@ -33,12 +33,12 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
           />
         </a>
 
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {dictionary.items.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-maia-muted transition duration-300 hover:text-maia-white"
+              className="rounded-full border border-transparent px-3 py-2 text-sm text-maia-muted transition duration-300 hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:font-semibold hover:text-white"
             >
               {item.label}
             </a>
@@ -67,18 +67,18 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
 
       <div
         className={cn(
-          "grid border-t border-white/10 bg-maia-black/96 transition-all duration-300 lg:hidden",
+          "mx-auto mt-2 grid max-w-[min(100%-1.5rem,32rem)] rounded-3xl border border-white/10 bg-maia-black/92 shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-all duration-300 lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
         <div className="overflow-hidden">
-          <div className="maia-container flex flex-col gap-4 py-5">
+          <div className="flex flex-col gap-3 p-5">
             {dictionary.items.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-maia-muted transition hover:text-maia-white"
+                className="rounded-full border border-transparent px-3 py-2 text-sm text-maia-muted transition hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:font-semibold hover:text-white"
               >
                 {item.label}
               </a>
