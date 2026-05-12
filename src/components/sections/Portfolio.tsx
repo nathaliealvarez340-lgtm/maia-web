@@ -14,8 +14,10 @@ type PortfolioProps = {
 
 export function Portfolio({ locale, dictionary }: PortfolioProps) {
   return (
-    <section id="portfolio" className="bg-maia-black py-24 sm:py-32">
-      <div className="maia-container">
+    <section id="portfolio" className="relative overflow-hidden bg-maia-black py-24 sm:py-32">
+      <div className="absolute inset-0 subtle-grid-bg opacity-25 [mask-image:linear-gradient(to_bottom,transparent,black_18%,transparent_92%)]" />
+      <div className="absolute left-0 top-1/3 h-80 w-80 rounded-full bg-maia-wine/18 blur-[130px]" />
+      <div className="maia-container relative">
         <SectionHeader
           eyebrow={dictionary.eyebrow}
           title={dictionary.title}
@@ -34,12 +36,17 @@ export function Portfolio({ locale, dictionary }: PortfolioProps) {
                 duration: 0.55,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="group grid gap-8 rounded-lg border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:border-maia-violet/45 hover:bg-white/[0.055] hover:shadow-[0_0_70px_rgba(91,33,182,0.16)] lg:grid-cols-[0.45fr_0.55fr] lg:p-8"
+              className="premium-border group grid gap-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.028] p-6 backdrop-blur-xl transition duration-300 hover:border-maia-violet/45 hover:bg-white/[0.05] hover:shadow-[0_28px_110px_rgba(59,10,69,0.22)] lg:grid-cols-[0.45fr_0.55fr] lg:p-8"
             >
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.22em] text-maia-violet">
                   {item.category}
                 </p>
+                {item.slug === "orbit-nexus" ? (
+                  <span className="mt-5 inline-flex rounded-full border border-maia-violet/25 bg-maia-violet/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-maia-white">
+                    MAIA Venture
+                  </span>
+                ) : null}
                 <h3 className="mt-6 text-4xl font-semibold text-maia-white sm:text-5xl">
                   {item.name}
                 </h3>
@@ -53,7 +60,7 @@ export function Portfolio({ locale, dictionary }: PortfolioProps) {
                   {item.services.map((service) => (
                     <span
                       key={service}
-                      className="rounded-full border border-white/10 bg-black/25 px-3 py-1 text-xs text-maia-muted"
+                      className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-xs text-maia-muted backdrop-blur"
                     >
                       {service}
                     </span>

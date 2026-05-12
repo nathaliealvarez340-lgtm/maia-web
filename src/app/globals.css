@@ -30,8 +30,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 78% 4%, rgba(91, 33, 182, 0.2), transparent 30rem),
-    linear-gradient(180deg, #050505 0%, #070708 44%, #050505 100%);
+    radial-gradient(circle at 78% 4%, rgba(91, 33, 182, 0.18), transparent 30rem),
+    radial-gradient(circle at 8% 42%, rgba(59, 10, 69, 0.16), transparent 34rem),
+    linear-gradient(180deg, #050505 0%, #09090b 44%, #050505 100%);
   color: var(--foreground);
 }
 
@@ -63,4 +64,52 @@ select {
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+.subtle-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.system-dots-bg {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(109, 40, 217, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(5, 5, 5, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 28px 90px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(22px);
+}
+
+.premium-border {
+  position: relative;
+}
+
+.premium-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(109, 40, 217, 0.34),
+    rgba(255, 255, 255, 0.05)
+  );
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
 }

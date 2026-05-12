@@ -20,8 +20,8 @@ export function SplineScene({ scene, className, label }: SplineSceneProps) {
     <div
       aria-label={label ?? "MAIA abstract strategy system"}
       className={cn(
-        "relative min-h-[360px] overflow-hidden rounded-lg border border-white/10 bg-maia-carbon/70",
-        "shadow-[0_0_90px_rgba(91,33,182,0.18)]",
+        "premium-border relative min-h-[360px] overflow-hidden rounded-lg border border-white/10 bg-maia-carbon/55",
+        "shadow-[0_32px_120px_rgba(0,0,0,0.4)] backdrop-blur-xl",
         className,
       )}
     >

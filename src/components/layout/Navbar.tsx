@@ -19,7 +19,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
 
   return (
     <header className="fixed inset-x-0 top-5 z-50 px-3">
-      <nav className="mx-auto flex h-14 w-full max-w-[1120px] items-center justify-between gap-3 rounded-full border border-white/10 bg-maia-black/72 px-4 shadow-[0_18px_70px_rgba(59,10,69,0.16)] backdrop-blur-xl sm:px-5">
+      <nav className="mx-auto flex h-14 w-full max-w-[1080px] items-center justify-between gap-3 rounded-full border border-white/10 bg-maia-black/70 px-4 shadow-[0_18px_70px_rgba(59,10,69,0.18)] backdrop-blur-2xl sm:px-5">
         <a
           href="#home"
           aria-label="MAIA home"
