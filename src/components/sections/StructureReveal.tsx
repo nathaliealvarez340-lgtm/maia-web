@@ -37,30 +37,45 @@ export function StructureReveal({
     [0, 0.22, 0.42, 0.85, 1],
     ["#050505", "#050505", "#240733", "#240733", "#0B0B0F"],
   );
-  const phraseIntroOpacity = useTransform(
+  const firstPhraseOpacity = useTransform(
     scrollYProgress,
-    [0, 0.04, 0.36, 0.43],
+    [0, 0.04, 0.5, 0.6],
     [0, 1, 1, 0],
   );
-  const phraseIntroScale = useTransform(
+  const firstPhraseScale = useTransform(
     scrollYProgress,
-    [0, 0.18, 0.36, 0.43],
-    prefersReducedMotion ? [1, 1, 1, 1] : [0.96, 1.08, 1.28, 1.34],
+    [0, 0.35, 0.5],
+    prefersReducedMotion ? [1, 1, 1] : [0.96, 1.08, 1.26],
   );
-  const phraseIntroY = useTransform(
+  const firstPhraseY = useTransform(
     scrollYProgress,
-    [0, 0.36, 0.43],
-    prefersReducedMotion ? [0, 0, 0] : [18, -8, -28],
+    [0, 0.5, 0.6],
+    prefersReducedMotion ? [0, 0, 0] : [18, -6, -18],
+  );
+  const secondPhraseOpacity = useTransform(
+    scrollYProgress,
+    [0.6, 0.78, 0.9, 1],
+    [0, 1, 1, 0],
+  );
+  const secondPhraseScale = useTransform(
+    scrollYProgress,
+    [0.6, 0.78, 0.9, 1],
+    prefersReducedMotion ? [1, 1, 1, 1] : [0.96, 1.1, 1.1, 1.02],
+  );
+  const secondPhraseY = useTransform(
+    scrollYProgress,
+    [0.6, 0.78, 1],
+    prefersReducedMotion ? [0, 0, 0] : [18, 0, -18],
   );
   const servicesOpacity = useTransform(
     scrollYProgress,
-    [0.48, 0.6, 0.85, 1],
-    [0, 1, 1, 1],
+    [0.92, 1],
+    [0, 1],
   );
   const servicesY = useTransform(
     scrollYProgress,
-    [0.48, 0.6, 1],
-    prefersReducedMotion ? [0, 0, 0] : [70, 0, 0],
+    [0.92, 1],
+    prefersReducedMotion ? [0, 0] : [60, 0],
   );
   const glowOpacity = useTransform(scrollYProgress, [0.18, 0.45, 0.8], [0, 0.28, 0.12]);
 
@@ -99,13 +114,24 @@ export function StructureReveal({
         <div className="maia-container relative z-10 flex min-h-screen items-center justify-center px-1 text-center">
           <motion.div
             style={{
-              opacity: phraseIntroOpacity,
-              scale: phraseIntroScale,
-              y: phraseIntroY,
+              opacity: firstPhraseOpacity,
+              scale: firstPhraseScale,
+              y: firstPhraseY,
             }}
             className="pointer-events-none absolute z-10 max-w-6xl origin-center will-change-transform"
           >
-            <RevealCopy dictionary={dictionary} />
+            <RevealFirstLine dictionary={dictionary} />
+          </motion.div>
+
+          <motion.div
+            style={{
+              opacity: secondPhraseOpacity,
+              scale: secondPhraseScale,
+              y: secondPhraseY,
+            }}
+            className="pointer-events-none absolute z-10 max-w-6xl origin-center will-change-transform"
+          >
+            <RevealStructureLine dictionary={dictionary} />
           </motion.div>
 
           <motion.div
@@ -134,6 +160,34 @@ function RevealCopy({ dictionary }: { dictionary: Dictionary["structureReveal"] 
         </span>
         .
       </span>
+    </h2>
+  );
+}
+
+function RevealFirstLine({
+  dictionary,
+}: {
+  dictionary: Dictionary["structureReveal"];
+}) {
+  return (
+    <h2 className="text-balance text-4xl font-semibold leading-[0.98] tracking-normal text-maia-white sm:text-6xl md:text-7xl xl:text-8xl">
+      {dictionary.lineOne}
+    </h2>
+  );
+}
+
+function RevealStructureLine({
+  dictionary,
+}: {
+  dictionary: Dictionary["structureReveal"];
+}) {
+  return (
+    <h2 className="text-balance text-4xl font-semibold leading-[0.98] tracking-normal text-maia-white sm:text-6xl md:text-7xl xl:text-8xl">
+      {dictionary.lineTwoPrefix}{" "}
+      <span className="text-maia-violet drop-shadow-[0_0_24px_rgba(109,40,217,0.28)]">
+        {dictionary.highlight}
+      </span>
+      .
     </h2>
   );
 }
