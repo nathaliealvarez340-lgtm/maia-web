@@ -38,7 +38,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full border border-transparent px-3 py-2 text-sm text-maia-muted transition duration-300 hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:font-semibold hover:text-white"
+              className="rounded-full border border-transparent px-3 py-2 text-sm font-medium text-maia-muted transition duration-300 hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:text-white"
             >
               {item.label}
             </a>
@@ -78,7 +78,7 @@ export function Navbar({ locale, dictionary }: NavbarProps) {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-full border border-transparent px-3 py-2 text-sm text-maia-muted transition hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:font-semibold hover:text-white"
+                className="rounded-full border border-transparent px-3 py-2 text-sm font-medium text-maia-muted transition hover:border-maia-violet/25 hover:bg-maia-violet/18 hover:text-white"
               >
                 {item.label}
               </a>

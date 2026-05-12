@@ -6,7 +6,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { ArrowRight, Blocks, Orbit, Workflow } from "lucide-react";
+import { Blocks, Orbit, Workflow } from "lucide-react";
 import { useRef } from "react";
 import { type Dictionary } from "@/i18n/dictionary";
 
@@ -34,8 +34,8 @@ export function StructureReveal({
 
   const backgroundColor = useTransform(
     scrollYProgress,
-    [0, 0.18, 0.34, 0.72, 1],
-    ["#050505", "#050505", "#240733", "#18051F", "#050505"],
+    [0, 0.22, 0.42, 0.85, 1],
+    ["#050505", "#050505", "#240733", "#240733", "#0B0B0F"],
   );
   const phraseIntroOpacity = useTransform(
     scrollYProgress,
@@ -45,7 +45,7 @@ export function StructureReveal({
   const phraseIntroScale = useTransform(
     scrollYProgress,
     [0, 0.18, 0.36, 0.43],
-    prefersReducedMotion ? [1, 1, 1, 1] : [0.96, 1.18, 1.9, 2.06],
+    prefersReducedMotion ? [1, 1, 1, 1] : [0.96, 1.08, 1.28, 1.34],
   );
   const phraseIntroY = useTransform(
     scrollYProgress,
@@ -54,45 +54,15 @@ export function StructureReveal({
   );
   const servicesOpacity = useTransform(
     scrollYProgress,
-    [0.44, 0.52, 0.74, 0.82],
-    [0, 1, 1, 0],
+    [0.48, 0.6, 0.85, 1],
+    [0, 1, 1, 1],
   );
   const servicesY = useTransform(
     scrollYProgress,
-    [0.44, 0.52, 0.74, 0.82],
-    prefersReducedMotion ? [0, 0, 0, 0] : [80, 0, 0, -60],
-  );
-  const phraseReturnOpacity = useTransform(
-    scrollYProgress,
-    [0.84, 0.94],
-    [0, 1],
-  );
-  const phraseReturnScale = useTransform(
-    scrollYProgress,
-    [0.84, 1],
-    prefersReducedMotion ? [1, 1] : [1.02, 1.14],
-  );
-  const finalCtaOpacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
-  const finalCtaY = useTransform(
-    scrollYProgress,
-    [0.9, 1],
-    prefersReducedMotion ? [0, 0] : [18, 0],
+    [0.48, 0.6, 1],
+    prefersReducedMotion ? [0, 0, 0] : [70, 0, 0],
   );
   const glowOpacity = useTransform(scrollYProgress, [0.18, 0.45, 0.8], [0, 0.28, 0.12]);
-
-  function scrollToCards() {
-    if (!containerRef.current) {
-      return;
-    }
-
-    const top = containerRef.current.offsetTop;
-    const target = top + containerRef.current.offsetHeight * 0.5;
-
-    window.scrollTo({
-      top: target,
-      behavior: prefersReducedMotion ? "auto" : "smooth",
-    });
-  }
 
   if (prefersReducedMotion) {
     return (
@@ -101,12 +71,6 @@ export function StructureReveal({
         <div className="maia-container relative grid gap-16">
           <RevealCopy dictionary={dictionary} />
           <ServicesScene services={services} />
-          <div className="flex flex-col items-center gap-5 text-center">
-            <p className="max-w-sm text-sm leading-6 text-maia-muted sm:text-base">
-              {dictionary.microcopy}
-            </p>
-            <RevealCta dictionary={dictionary} onClick={scrollToCards} />
-          </div>
         </div>
       </section>
     );
@@ -116,7 +80,7 @@ export function StructureReveal({
     <section
       ref={containerRef}
       id="builds"
-      className="relative h-[460vh] bg-maia-black md:h-[520vh]"
+      className="relative h-[360vh] bg-maia-black md:h-[380vh]"
     >
       <motion.div
         style={{ backgroundColor }}
@@ -153,25 +117,6 @@ export function StructureReveal({
             </div>
           </motion.div>
 
-          <motion.div
-            style={{
-              opacity: phraseReturnOpacity,
-              scale: phraseReturnScale,
-            }}
-            className="pointer-events-none absolute z-10 max-w-6xl origin-center will-change-transform"
-          >
-            <RevealCopy dictionary={dictionary} />
-          </motion.div>
-
-          <motion.div
-            style={{ opacity: finalCtaOpacity, y: finalCtaY }}
-            className="absolute bottom-14 z-40 flex flex-col items-center gap-5 sm:bottom-16"
-          >
-            <p className="max-w-sm text-sm leading-6 text-maia-muted sm:text-base">
-              {dictionary.microcopy}
-            </p>
-            <RevealCta dictionary={dictionary} onClick={scrollToCards} />
-          </motion.div>
         </div>
       </motion.div>
     </section>
@@ -195,8 +140,12 @@ function RevealCopy({ dictionary }: { dictionary: Dictionary["structureReveal"] 
 
 function ServicesScene({ services }: { services: Dictionary["services"] }) {
   return (
-    <div className="w-full text-left">
-      <div className="mx-auto max-w-3xl text-center">
+    <div className="relative w-full overflow-hidden rounded-[2rem] border border-white/10 bg-black/14 px-5 py-8 text-left backdrop-blur-sm sm:px-8 lg:px-10">
+      <div className="pointer-events-none absolute inset-0 opacity-70 [background-image:radial-gradient(circle_at_center,rgba(109,40,217,0.22)_1px,transparent_1px)] [background-size:26px_26px] [mask-image:radial-gradient(circle_at_center,black,transparent_72%)]" />
+      <div className="pointer-events-none absolute -right-20 top-8 h-72 w-72 rounded-full bg-maia-purple/14 blur-[110px]" />
+      <div className="pointer-events-none absolute left-0 top-1/2 h-px w-full bg-gradient-to-r from-transparent via-maia-violet/25 to-transparent" />
+
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
         <p className="mb-4 font-mono text-xs uppercase tracking-[0.28em] text-maia-violet">
           {services.eyebrow}
         </p>
@@ -208,48 +157,34 @@ function ServicesScene({ services }: { services: Dictionary["services"] }) {
         </p>
       </div>
 
-      <div className="mt-8 grid gap-3 md:grid-cols-3 lg:mt-10 lg:gap-4">
-        {services.items.map((service) => {
+      <div className="relative z-10 mt-8 grid gap-3 md:grid-cols-3 lg:mt-12 lg:gap-6">
+        {services.items.map((service, index) => {
           const Icon = icons[service.icon as keyof typeof icons] ?? Orbit;
 
           return (
             <article
               key={service.title}
-              className="group min-h-[200px] rounded-lg border border-white/10 bg-black/24 p-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition hover:border-maia-violet/35 hover:bg-black/32 sm:p-5 lg:min-h-[230px] lg:p-6"
+              className="group relative min-h-[220px] overflow-hidden border-t border-white/10 px-2 py-6 text-left transition hover:border-maia-violet/35 md:border-l md:border-t-0 md:px-6 lg:min-h-[250px]"
             >
-              <div className="mb-5 inline-flex size-10 items-center justify-center rounded-full border border-maia-violet/35 bg-maia-violet/10 text-maia-white lg:mb-8 lg:size-11">
-                <Icon className="size-5" />
+              <span className="pointer-events-none absolute -right-2 top-2 z-0 text-[7rem] font-bold leading-none text-maia-violet/12 sm:text-[8rem] lg:text-[9rem]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="relative z-10">
+                <div className="mb-7 inline-flex size-10 items-center justify-center rounded-full border border-maia-violet/30 bg-black/30 text-maia-white backdrop-blur">
+                  <Icon className="size-5" />
+                </div>
+                <h4 className="max-w-xs text-xl font-semibold text-maia-white lg:text-2xl">
+                  {service.title}
+                </h4>
+                <p className="mt-4 max-w-sm text-sm leading-7 text-maia-muted sm:text-base">
+                  {service.description}
+                </p>
               </div>
-              <h4 className="text-lg font-semibold text-maia-white lg:text-xl">
-                {service.title}
-              </h4>
-              <p className="mt-3 text-sm leading-6 text-maia-muted sm:text-base lg:mt-4 lg:leading-7">
-                {service.description}
-              </p>
             </article>
           );
         })}
       </div>
     </div>
-  );
-}
-
-function RevealCta({
-  dictionary,
-  onClick,
-}: {
-  dictionary: Dictionary["structureReveal"];
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className="group inline-flex h-11 items-center justify-center gap-2 rounded-full border border-white/12 bg-black/30 px-5 text-sm font-semibold text-maia-white backdrop-blur-md transition hover:border-maia-violet/55 hover:bg-maia-violet/12 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-maia-violet"
-    >
-      {dictionary.button}
-      <ArrowRight className="size-4 transition group-hover:translate-x-0.5" />
-    </button>
   );
 }
 
