@@ -28,23 +28,23 @@ export function StructureReveal({ dictionary }: StructureRevealProps) {
   );
   const firstOpacity = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.42, 0.52],
+    [0, 0.05, 0.35, 0.48],
     [0, 1, 1, 0],
   );
   const firstScale = useTransform(
     scrollYProgress,
-    [0, 0.25, 0.42],
-    prefersReducedMotion ? [1, 1, 1] : [0.96, 1.06, 1.22],
+    [0, 0.35, 0.48],
+    prefersReducedMotion ? [1, 1, 1] : [0.98, 1.08, 1.12],
   );
   const secondOpacity = useTransform(
     scrollYProgress,
-    [0.52, 0.62, 0.82, 0.95],
+    [0.48, 0.62, 0.85, 1],
     [0, 1, 1, 0],
   );
   const secondScale = useTransform(
     scrollYProgress,
-    [0.52, 0.72, 0.95],
-    prefersReducedMotion ? [1, 1, 1] : [0.96, 1.08, 1.02],
+    [0.48, 0.7, 1],
+    prefersReducedMotion ? [1, 1, 1] : [0.98, 1.08, 1],
   );
   const glowOpacity = useTransform(
     scrollYProgress,
@@ -76,17 +76,17 @@ export function StructureReveal({ dictionary }: StructureRevealProps) {
           className="absolute left-1/2 top-1/2 h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-maia-wine blur-[170px]"
         />
 
-        <div className="maia-container relative z-10 flex min-h-screen items-center justify-center text-center">
+        <div className="relative z-10 flex min-h-screen w-full items-center justify-center px-6 text-center">
           <motion.div
             style={{ opacity: firstOpacity, scale: firstScale }}
-            className="pointer-events-none absolute max-w-5xl will-change-transform"
+            className="pointer-events-none absolute mx-auto w-[min(1100px,90vw)] will-change-transform"
           >
             <FirstLine dictionary={dictionary} />
           </motion.div>
 
           <motion.div
             style={{ opacity: secondOpacity, scale: secondScale }}
-            className="pointer-events-none absolute max-w-5xl will-change-transform"
+            className="pointer-events-none absolute mx-auto w-[min(1100px,90vw)] will-change-transform"
           >
             <SecondLine dictionary={dictionary} />
           </motion.div>
@@ -98,7 +98,7 @@ export function StructureReveal({ dictionary }: StructureRevealProps) {
 
 function FirstLine({ dictionary }: StructureRevealProps) {
   return (
-    <h2 className="text-balance text-4xl font-semibold leading-[0.98] text-maia-white sm:text-6xl md:text-7xl xl:text-8xl">
+    <h2 className="mx-auto max-w-[min(1100px,90vw)] text-balance text-center text-[clamp(3rem,8vw,7.5rem)] font-semibold leading-[0.96] text-maia-white">
       {dictionary.lineOne}
     </h2>
   );
@@ -106,7 +106,7 @@ function FirstLine({ dictionary }: StructureRevealProps) {
 
 function SecondLine({ dictionary }: StructureRevealProps) {
   return (
-    <h2 className="text-balance text-4xl font-semibold leading-[0.98] text-maia-white sm:text-6xl md:text-7xl xl:text-8xl">
+    <h2 className="mx-auto max-w-[min(1100px,90vw)] text-balance text-center text-[clamp(3rem,8vw,7.5rem)] font-semibold leading-[0.96] text-maia-white">
       {dictionary.lineTwoPrefix}{" "}
       <span className="text-maia-violet drop-shadow-[0_0_24px_rgba(109,40,217,0.28)]">
         {dictionary.highlight}
