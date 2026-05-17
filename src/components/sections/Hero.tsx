@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
-import { SplineScene } from "@/components/ui/SplineScene";
 import { type Dictionary } from "@/i18n/dictionary";
 
 type HeroProps = {
@@ -18,19 +17,21 @@ export function Hero({ dictionary }: HeroProps) {
       id="home"
       className="relative isolate min-h-screen overflow-hidden bg-maia-black pt-36 sm:pt-40"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_22%,rgba(109,40,217,0.2),transparent_31rem),radial-gradient(circle_at_18%_72%,rgba(59,10,69,0.2),transparent_34rem),linear-gradient(180deg,#050505_0%,#09090B_52%,#050505_100%)]" />
-      <div className="absolute inset-0 subtle-grid-bg opacity-35 [mask-image:linear-gradient(to_bottom,black,transparent_86%)]" />
-      <div className="absolute inset-0 system-dots-bg opacity-20 [mask-image:radial-gradient(circle_at_72%_36%,black,transparent_52%)]" />
-      <div className="absolute right-[-10%] top-[18%] h-[42rem] w-[42rem] rounded-full border border-maia-violet/10 bg-maia-purple/10 blur-[120px]" />
-      <div className="absolute left-[8%] top-[22%] hidden h-[34rem] w-px bg-gradient-to-b from-transparent via-maia-violet/20 to-transparent lg:block" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_16%,rgba(109,40,217,0.22),transparent_34rem),radial-gradient(ellipse_at_50%_78%,rgba(59,10,69,0.28),transparent_38rem),linear-gradient(180deg,#050505_0%,#09090B_48%,#050505_100%)]" />
+      <div className="absolute inset-0 subtle-grid-bg opacity-30 [mask-image:radial-gradient(ellipse_at_center,black,transparent_72%)]" />
+      <div className="absolute inset-x-0 top-0 mx-auto h-full w-[min(54rem,92vw)] bg-[linear-gradient(90deg,transparent,rgba(109,40,217,0.08),transparent)] blur-2xl" />
+      <div className="absolute left-1/2 top-[12%] h-[74vh] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-maia-violet/38 to-transparent" />
+      <div className="absolute left-1/2 top-[16%] h-[68vh] w-[min(38rem,78vw)] -translate-x-1/2 rounded-full border border-maia-violet/10 bg-[radial-gradient(ellipse_at_center,rgba(109,40,217,0.16),transparent_62%)] blur-sm" />
+      <div className="absolute left-1/2 top-[18%] h-[62vh] w-[min(64rem,96vw)] -translate-x-1/2 rounded-[50%] border border-white/[0.035]" />
+      <div className="absolute left-1/2 top-[26%] h-[46vh] w-[min(50rem,88vw)] -translate-x-1/2 rounded-[50%] border border-maia-violet/10" />
       <div className="absolute bottom-0 left-1/2 h-px w-[min(84rem,90vw)] -translate-x-1/2 bg-gradient-to-r from-transparent via-maia-violet/28 to-transparent" />
 
-      <div className="maia-container relative grid min-h-[calc(100vh-9rem)] items-center gap-12 pb-20 lg:grid-cols-[1.02fr_0.98fr]">
+      <div className="maia-container relative flex min-h-[calc(100vh-9rem)] items-center justify-center pb-20">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl text-center lg:text-left"
+          className="mx-auto max-w-5xl text-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -47,7 +48,7 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, scale: 0.985, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.16, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-[12ch] text-balance text-[clamp(3.7rem,8.6vw,7.2rem)] font-semibold uppercase leading-[0.84] tracking-normal text-maia-white lg:mx-0"
+            className="mx-auto max-w-[12ch] text-balance text-[clamp(3.7rem,9vw,7.6rem)] font-semibold uppercase leading-[0.84] tracking-normal text-maia-white"
           >
             {firstLineParts.map((part) => (
               <span key={part} className="block">
@@ -67,7 +68,7 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto mt-8 max-w-2xl border-maia-violet/35 text-lg leading-8 text-maia-muted sm:text-xl lg:mx-0 lg:border-l lg:pl-5"
+            className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-maia-muted sm:text-xl"
           >
             {dictionary.description}
           </motion.p>
@@ -76,7 +77,7 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.38, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start"
+            className="mt-10 flex flex-col justify-center gap-3 sm:flex-row"
           >
             <ButtonLink href="#contact" showIcon>
               {dictionary.primaryCta}
@@ -87,16 +88,6 @@ export function Hero({ dictionary }: HeroProps) {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.22, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto w-full max-w-[34rem] lg:justify-self-end"
-        >
-          <div className="absolute -inset-8 rounded-[2.2rem] border border-white/5 bg-white/[0.018] blur-sm" />
-          <div className="absolute -inset-4 rounded-[1.8rem] bg-[conic-gradient(from_180deg,transparent,rgba(109,40,217,0.2),transparent_32%)] opacity-70 blur-2xl" />
-          <SplineScene className="h-[360px] rounded-[1.35rem] sm:h-[440px] lg:h-[610px]" />
-        </motion.div>
       </div>
     </section>
   );
