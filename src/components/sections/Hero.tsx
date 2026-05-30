@@ -9,9 +9,6 @@ type HeroProps = {
 };
 
 export function Hero({ dictionary }: HeroProps) {
-  const firstLineParts = dictionary.lineOne.replace(/\.$/, ".").split(" ");
-  const secondLineParts = dictionary.lineTwo.replace(/\.$/, ".").split(" ");
-
   return (
     <section
       id="home"
@@ -37,7 +34,7 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-8 inline-flex rounded-full border border-white/10 bg-black/35 px-4 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl"
+            className="mb-10 inline-flex rounded-full border border-white/10 bg-black/35 px-4 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-xl"
           >
             <p className="font-mono text-[11px] uppercase tracking-[0.26em] text-maia-muted">
               {dictionary.eyebrow}
@@ -48,19 +45,11 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, scale: 0.985, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.16, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto max-w-[12ch] text-balance text-[clamp(3.7rem,9vw,7.6rem)] font-semibold uppercase leading-[0.84] tracking-normal text-maia-white"
+            className="text-balance text-[clamp(3rem,7vw,6.5rem)] font-semibold leading-[0.9] tracking-tight text-maia-white"
           >
-            {firstLineParts.map((part) => (
-              <span key={part} className="block">
-                {part}
-              </span>
-            ))}
+            <span className="block">{dictionary.lineOne}</span>
             <span className="mt-3 block text-maia-violet drop-shadow-[0_0_28px_rgba(109,40,217,0.36)]">
-              {secondLineParts.map((part) => (
-                <span key={part} className="block">
-                  {part}
-                </span>
-              ))}
+              {dictionary.lineTwo}
             </span>
           </motion.h1>
 
@@ -68,7 +57,7 @@ export function Hero({ dictionary }: HeroProps) {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-maia-muted sm:text-xl"
+            className="mx-auto mt-8 max-w-xl text-lg leading-8 text-maia-muted sm:text-xl"
           >
             {dictionary.description}
           </motion.p>
@@ -87,7 +76,6 @@ export function Hero({ dictionary }: HeroProps) {
             </ButtonLink>
           </motion.div>
         </motion.div>
-
       </div>
     </section>
   );

@@ -27,13 +27,13 @@ export default async function LocalePage({ params }: LocalePageProps) {
   return (
     <main>
       <Hero dictionary={dictionary.hero} />
+      <WhyMaia dictionary={dictionary.whyMaia} />
       <StructureReveal dictionary={dictionary.structureReveal} />
       <Services dictionary={dictionary.services} />
       <Method dictionary={dictionary.method} />
       <Portfolio locale={locale} dictionary={dictionary.portfolio} />
-      <OffSociety dictionary={dictionary.offSociety} />
       <IntelligenceWeekly locale={locale} dictionary={dictionary.newsletter} />
-      <WhyMaia dictionary={dictionary.whyMaia} />
+      <OffSociety dictionary={dictionary.offSociety} />
       <Contact dictionary={dictionary.contact} />
     </main>
   );

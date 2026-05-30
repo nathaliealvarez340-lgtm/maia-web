@@ -1,83 +1,138 @@
 {
   "seo": {
-    "title": "MAIA | Branding, Business Architecture & Growth Systems",
-    "description": "A MAIA constrói marcas, estruturas de negócio e sistemas de crescimento para empresas prontas para parar de improvisar.",
-    "keywords": ["branding", "business architecture", "growth systems", "estratégia de marca", "automação", "sistemas de crescimento", "consultoria estratégica", "MAIA"],
+    "title": "MAIA | Business Architecture · Brand Strategy · Growth Systems",
+    "description": "A MAIA desenha, estrutura e escala organizações modernas na América Latina. Não vendemos serviços isolados. Construímos sistemas completos.",
+    "keywords": ["business architecture", "brand strategy", "growth systems", "arquitetura empresarial", "estratégia de marca", "sistemas de crescimento", "MAIA"],
     "openGraphLocale": "pt_BR"
   },
   "nav": {
     "brand": "MAIA",
     "items": [
       { "label": "Início", "href": "#home" },
-      { "label": "Serviços", "href": "#services" },
+      { "label": "O que construímos", "href": "#services" },
       { "label": "Método", "href": "#method" },
-      { "label": "Portfólio", "href": "#portfolio" },
+      { "label": "Trabalho", "href": "#portfolio" },
       { "label": "Intelligence", "href": "#intelligence" },
       { "label": "Contato", "href": "#contact" }
     ],
-    "cta": "Trabalhar com MAIA",
+    "cta": "Iniciar conversa",
     "languageLabel": "Idioma"
   },
   "footer": {
     "brand": "MAIA",
-    "disciplines": "Branding | Business Architecture | Growth Systems",
-    "tagline": "Estratégia que desenha. Sistemas que escalam.",
+    "disciplines": "Business Architecture · Brand Strategy · Growth Systems",
+    "tagline": "Estrutura primeiro. Crescimento depois.",
     "items": [
       { "label": "Início", "href": "#home" },
-      { "label": "Serviços", "href": "#services" },
+      { "label": "O que construímos", "href": "#services" },
       { "label": "Método", "href": "#method" },
-      { "label": "Portfólio", "href": "#portfolio" },
+      { "label": "Trabalho", "href": "#portfolio" },
       { "label": "Intelligence", "href": "#intelligence" },
       { "label": "Contato", "href": "#contact" }
     ]
   },
   "hero": {
-    "eyebrow": "Branding | Business Architecture | Growth Systems",
-    "lineOne": "Estratégia que desenha.",
-    "lineTwo": "Sistemas que escalam.",
-    "highlight": "escalam",
-    "description": "Construímos marcas, estruturas e sistemas de crescimento para empresas prontas para parar de improvisar.",
-    "primaryCta": "Iniciar projeto",
-    "secondaryCta": "Explorar serviços"
+    "eyebrow": "Business Architecture · Brand Strategy · Growth Systems",
+    "lineOne": "O futuro das empresas",
+    "lineTwo": "se desenha por dentro.",
+    "highlight": "dentro",
+    "description": "A maioria das empresas cresce por fora e se desestrutura por dentro. A MAIA existe para que isso não seja inevitável.",
+    "primaryCta": "Iniciar conversa",
+    "secondaryCta": "Como trabalhamos"
   },
   "structureReveal": {
-    "lineOne": "O seu negócio não precisa de mais ideias.",
-    "lineTwoPrefix": "Precisa de",
+    "lineOne": "As empresas não fracassam por falta de talento.",
+    "lineTwoPrefix": "Fracassam sem",
     "highlight": "estrutura",
-    "button": "O que construímos",
-    "microcopy": "Da ideia dispersa ao sistema que escala."
+    "button": "As três camadas",
+    "microcopy": "Estrutura primeiro. Crescimento depois."
   },
   "services": {
-    "eyebrow": "O que a MAIA constrói",
-    "title": "O que a MAIA constrói",
-    "description": "Não fazemos marcas apenas para parecerem bonitas. Construímos estruturas para que uma empresa se entenda, comunique e cresça com direção.",
+    "eyebrow": "As três camadas",
+    "title": "Uma organização se constrói em camadas.",
+    "description": "Três disciplinas que não funcionam em isolamento. Uma marca sem estrutura não escala. Uma operação sem identidade não conecta. E a tecnologia sem direção só gera complexidade.",
     "items": [
-      { "title": "Sistemas de marca", "description": "Posicionamento, identidade visual, narrativa e presença estratégica para que uma marca deixe de parecer genérica.", "icon": "orbit" },
-      { "title": "Arquitetura de negócio", "description": "Oferta, processos, estrutura comercial e clareza interna para que o negócio funcione com intenção.", "icon": "blocks" },
-      { "title": "Sistemas de crescimento", "description": "Automação, conteúdo, CRM, funis e tecnologia para escalar sem depender da improvisação.", "icon": "workflow" }
+      {
+        "number": "01",
+        "title": "Business Architecture",
+        "description": "Desenhamos a estrutura interna da sua organização: oferta, processos, modelo de negócio e sistemas operacionais para que o crescimento tenha onde se sustentar.",
+        "pillars": ["Modelo de negócio", "Estrutura operacional", "Arquitetura de oferta", "Clareza organizacional"],
+        "icon": "blocks"
+      },
+      {
+        "number": "02",
+        "title": "Brand Strategy",
+        "description": "Construímos o sistema de marca que torna sua organização reconhecível, relevante e lembrada. Posicionamento, identidade, narrativa e presença estratégica.",
+        "pillars": ["Posicionamento", "Identidade visual", "Narrativa estratégica", "Comunicação de marca"],
+        "icon": "orbit"
+      },
+      {
+        "number": "03",
+        "title": "Growth Systems",
+        "description": "Implementamos os sistemas tecnológicos que permitem escalar com intenção: automação, CRM, funis, conteúdo estratégico e métricas de crescimento.",
+        "pillars": ["Automação", "CRM & funis", "Conteúdo estratégico", "Métricas de escala"],
+        "icon": "workflow"
+      }
     ]
   },
   "method": {
     "eyebrow": "Método próprio",
     "title": "MAIA Growth Architecture™",
-    "description": "Um método para converter marcas dispersas em sistemas claros, memoráveis e escaláveis.",
+    "description": "Não começamos pela execução. Começamos pelo entendimento. Quatro fases que transformam organizações dispersas em sistemas que escalam.",
     "steps": [
-      { "phase": "Decode", "title": "Decodificar", "description": "Analisamos marca, negócio, audiência, percepção, oferta e pontos de fricção." },
-      { "phase": "Design", "title": "Desenhar", "description": "Construímos identidade, narrativa, experiência visual, arquitetura comercial e proposta de valor." },
-      { "phase": "Deploy", "title": "Implementar", "description": "Levamos a estratégia para web, conteúdo, automação, CRM e ativos digitais." },
-      { "phase": "Scale", "title": "Escalar", "description": "Medimos, otimizamos e transformamos a estrutura em crescimento sustentável." }
+      {
+        "phase": "Decode",
+        "title": "Decodificar",
+        "description": "Analisamos a organização em profundidade: marca, oferta, processos, audiência, percepção e pontos de fricção. Sem diagnóstico honesto, não há estratégia real."
+      },
+      {
+        "phase": "Design",
+        "title": "Desenhar",
+        "description": "Construímos a arquitetura completa: identidade, narrativa, estrutura comercial e modelo operacional. Tudo conectado. Tudo com propósito."
+      },
+      {
+        "phase": "Deploy",
+        "title": "Implementar",
+        "description": "Levamos a estratégia à realidade: web, conteúdo, automação, CRM e ativos digitais. A execução é tão importante quanto a visão."
+      },
+      {
+        "phase": "Scale",
+        "title": "Escalar",
+        "description": "Medimos, otimizamos e convertemos a estrutura em crescimento sustentável. Não construímos para um momento. Construímos para a próxima década."
+      }
     ]
   },
   "portfolio": {
     "eyebrow": "Selected Work",
     "title": "Trabalho selecionado",
-    "description": "Projetos onde a estratégia se converte em estrutura, marca e sistema.",
+    "description": "Organizações onde a estratégia se converte em estrutura, identidade e sistema.",
     "cta": "Ver caso",
     "resultLabel": "Resultado",
     "cases": [
-      { "slug": "bet", "name": "BET", "category": "Branding médico / arquitetura de marca", "description": "Construção de identidade, narrativa e presença estratégica para uma empresa especializada em próteses internas.", "services": ["Branding", "Posicionamento", "Identidade", "Comunicação estratégica"], "result": "Uma marca mais clara, profissional e confiável para um mercado técnico e sensível." },
-      { "slug": "orbit-nexus", "name": "Orbit Nexus", "category": "SaaS / arquitetura de negócio / sistemas de crescimento", "description": "Desenho conceitual e estrutural de uma plataforma B2B para consultorias, gestão de talentos, KPIs, projetos e inteligência operacional.", "services": ["Business Architecture", "UX Strategy", "SaaS Concept", "Growth Systems", "AI Matching"], "result": "Um sistema escalável pensado para transformar operação, alocação de talentos e tomada de decisão." },
-      { "slug": "suut", "name": "SUUT", "category": "Empresa técnica / presença digital / estrutura comercial", "description": "Estruturação de presença digital e comunicação para uma empresa de venda, serviço e manutenção de grupos geradores.", "services": ["Estratégia digital", "Comunicação comercial", "Estrutura de marca", "Growth Systems"], "result": "Uma presença mais profissional para comunicar confiança, capacidade técnica e serviço." }
+      {
+        "slug": "bet",
+        "name": "BET",
+        "category": "Arquitetura de marca médica",
+        "description": "Construção de identidade, narrativa e presença estratégica para uma empresa especializada em próteses internas.",
+        "services": ["Branding", "Posicionamento", "Identidade", "Comunicação estratégica"],
+        "result": "Uma marca mais clara, profissional e confiável para um mercado técnico e sensível."
+      },
+      {
+        "slug": "orbit-nexus",
+        "name": "Orbit Nexus",
+        "category": "SaaS · Arquitetura de negócio · Growth Systems",
+        "description": "Desenho conceitual e estrutural de uma plataforma B2B para gestão de talentos, KPIs, projetos e inteligência operacional.",
+        "services": ["Business Architecture", "UX Strategy", "SaaS Concept", "Growth Systems", "AI Matching"],
+        "result": "Um sistema escalável pensado para transformar operação, alocação de talentos e tomada de decisão."
+      },
+      {
+        "slug": "suut",
+        "name": "SUUT",
+        "category": "Presença digital · Estrutura comercial",
+        "description": "Estruturação de presença digital e comunicação para uma empresa de venda, serviço e manutenção de grupos geradores.",
+        "services": ["Estratégia digital", "Comunicação comercial", "Estrutura de marca", "Growth Systems"],
+        "result": "Uma presença mais profissional para comunicar confiança, capacidade técnica e serviço."
+      }
     ]
   },
   "offSociety": {
@@ -92,12 +147,30 @@
     "signalLabel": "OFF Signal",
     "signalCaption": "Avance devagar. Cada sinal foi pensado para permanecer por um momento.",
     "signals": [
-      { "title": "Parece bem… mas se sente OFF.", "text": "Há pessoas que parecem avançar o tempo todo… e ainda assim sentem que algo não conecta." },
-      { "title": "Produtividade sem direção também cansa.", "text": "Nem todo esgotamento vem do trabalho. Às vezes vem de construir sem clareza." },
-      { "title": "Você não está atrasado. Está saturado.", "text": "Vivemos expostos a vidas demais, metas demais e pressão demais ao mesmo tempo." },
-      { "title": "O problema nem sempre é falta de talento.", "text": "Às vezes é excesso de ruído, comparação e expectativas impossíveis de sustentar." },
-      { "title": "OFF nem sempre significa perdido.", "text": "Às vezes significa que você já não consegue continuar crescendo pela inércia." },
-      { "title": "Construir também deveria parecer seu.", "text": "MAIA OFF Society nasce para quem quer crescer sem se perder no processo." }
+      {
+        "title": "Parece bem… mas se sente OFF.",
+        "text": "Há pessoas que parecem avançar o tempo todo… e ainda assim sentem que algo não conecta."
+      },
+      {
+        "title": "Produtividade sem direção também cansa.",
+        "text": "Nem todo esgotamento vem do trabalho. Às vezes vem de construir sem clareza."
+      },
+      {
+        "title": "Você não está atrasado. Está saturado.",
+        "text": "Vivemos expostos a vidas demais, metas demais e pressão demais ao mesmo tempo."
+      },
+      {
+        "title": "O problema nem sempre é falta de talento.",
+        "text": "Às vezes é excesso de ruído, comparação e expectativas impossíveis de sustentar."
+      },
+      {
+        "title": "OFF nem sempre significa perdido.",
+        "text": "Às vezes significa que você já não consegue continuar crescendo pela inércia."
+      },
+      {
+        "title": "Construir também deveria parecer seu.",
+        "text": "MAIA OFF Society nasce para quem quer crescer sem se perder no processo."
+      }
     ],
     "join": {
       "label": "Private Signal",
@@ -118,25 +191,33 @@
   },
   "whyMaia": {
     "eyebrow": "Por que MAIA",
-    "title": "Por que MAIA",
-    "statement": "Uma marca bonita chama atenção. Uma marca estratégica constrói poder.",
-    "items": [
-      { "title": "Não só branding", "description": "Porque uma identidade visual sem estrutura apenas maquia o problema." },
-      { "title": "Não só marketing", "description": "Porque crescer sem direção transforma comunicação em ruído." },
-      { "title": "Não só tecnologia", "description": "Porque automatizar sem estratégia apenas acelera a desordem." },
-      { "title": "Sistema completo", "description": "A MAIA une marca, negócio e crescimento para construir empresas mais claras, memoráveis e escaláveis." }
-    ]
+    "title": "As empresas do futuro não serão construídas como as do passado.",
+    "paragraphs": [
+      "O mundo mudou. Os mercados se movem mais rápido, a tecnologia avança sem parar e as regras que definiram o sucesso por décadas já não são as mesmas.",
+      "No entanto, a maioria das empresas ainda tenta crescer com estruturas que não foram projetadas para esse ambiente. Processos desconectados. Equipes sem alinhamento. Marcas que prometem uma coisa enquanto a operação entrega outra.",
+      "A consequência não é sempre o fracasso visível. É algo mais silencioso: uma organização que parece funcionar por fora, mas perde velocidade, eficiência e capacidade de crescimento por dentro.",
+      "A MAIA nasceu para resolver isso. Não vendemos serviços isolados. Desenhamos sistemas completos. Não otimizamos departamentos. Desenhamos organizações. Não construímos ferramentas. Construímos infraestrutura para o crescimento.",
+      "Porque as melhores empresas latino-americanas da próxima década ainda não existem. E queremos ajudar a construí-las."
+    ],
+    "statement": "Não queremos nos tornar uma empresa conhecida. Queremos nos tornar uma empresa necessária.",
+    "cta": "Explorar como trabalhamos"
   },
   "contact": {
-    "eyebrow": "Contato",
-    "title": "Vamos construir algo com direção.",
-    "description": "Conte o que você está construindo e onde precisa de clareza, estrutura ou crescimento.",
-    "fields": { "name": "Nome", "company": "Empresa", "email": "Email", "service": "Serviço de interesse", "message": "Mensagem" },
-    "services": ["Branding", "Business Architecture", "Growth Systems", "Projeto integral", "Outro"],
-    "submit": "Enviar solicitação",
+    "eyebrow": "Vamos começar",
+    "title": "Se você está construindo algo que merece durar.",
+    "description": "Conte o que você está construindo e onde precisa de clareza, estrutura ou crescimento. O primeiro passo é uma conversa honesta.",
+    "fields": {
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "Email",
+      "service": "Área de interesse",
+      "message": "Conte sobre sua organização"
+    },
+    "services": ["Business Architecture", "Brand Strategy", "Growth Systems", "Projeto integral", "Outro"],
+    "submit": "Iniciar conversa",
     "sending": "Enviando...",
-    "success": "Solicitação enviada. A MAIA responderá com o próximo passo.",
+    "success": "Solicitação recebida. A MAIA responderá com o próximo passo.",
     "error": "Não foi possível enviar a solicitação. Revise a configuração do servidor.",
-    "selectPlaceholder": "Selecione uma opção"
+    "selectPlaceholder": "Selecione uma área"
   }
 }

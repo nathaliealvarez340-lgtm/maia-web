@@ -47,7 +47,7 @@ export function Method({ dictionary }: MethodProps) {
                 </span>
                 <div className="relative z-10 flex min-h-[288px] flex-col justify-end">
                   <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.2em] text-maia-violet">
-                    Fase {index + 1}
+                    {step.phase}
                   </p>
                   <h3 className="text-2xl font-semibold text-maia-white lg:text-3xl">
                     {step.title}

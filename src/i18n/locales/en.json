@@ -1,89 +1,144 @@
 {
   "seo": {
-    "title": "MAIA | Branding, Business Architecture & Growth Systems",
-    "description": "MAIA builds brands, business structures and growth systems for companies ready to stop improvising.",
-    "keywords": ["branding", "business architecture", "growth systems", "brand strategy", "automation", "strategic consulting", "MAIA"],
+    "title": "MAIA | Business Architecture · Brand Strategy · Growth Systems",
+    "description": "MAIA designs, structures and scales modern organizations in Latin America. We don't sell isolated services. We build complete systems.",
+    "keywords": ["business architecture", "brand strategy", "growth systems", "organizational design", "brand identity", "scaling systems", "MAIA"],
     "openGraphLocale": "en_US"
   },
   "nav": {
     "brand": "MAIA",
     "items": [
       { "label": "Home", "href": "#home" },
-      { "label": "Services", "href": "#services" },
+      { "label": "What we build", "href": "#services" },
       { "label": "Method", "href": "#method" },
-      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "Work", "href": "#portfolio" },
       { "label": "Intelligence", "href": "#intelligence" },
       { "label": "Contact", "href": "#contact" }
     ],
-    "cta": "Work with MAIA",
+    "cta": "Start a conversation",
     "languageLabel": "Language"
   },
   "footer": {
     "brand": "MAIA",
-    "disciplines": "Branding | Business Architecture | Growth Systems",
-    "tagline": "Strategy that designs. Systems that scale.",
+    "disciplines": "Business Architecture · Brand Strategy · Growth Systems",
+    "tagline": "Structure first. Growth after.",
     "items": [
       { "label": "Home", "href": "#home" },
-      { "label": "Services", "href": "#services" },
+      { "label": "What we build", "href": "#services" },
       { "label": "Method", "href": "#method" },
-      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "Work", "href": "#portfolio" },
       { "label": "Intelligence", "href": "#intelligence" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
-    "eyebrow": "Branding | Business Architecture | Growth Systems",
-    "lineOne": "Strategy that designs.",
-    "lineTwo": "Systems that scale.",
-    "highlight": "scale",
-    "description": "We build brands, structures and growth systems for businesses ready to stop improvising.",
-    "primaryCta": "Start a project",
-    "secondaryCta": "Explore services"
+    "eyebrow": "Business Architecture · Brand Strategy · Growth Systems",
+    "lineOne": "The future of companies",
+    "lineTwo": "is designed from within.",
+    "highlight": "within",
+    "description": "Most companies grow on the outside and fall apart on the inside. MAIA exists to make sure that is not inevitable.",
+    "primaryCta": "Start a conversation",
+    "secondaryCta": "How we work"
   },
   "structureReveal": {
-    "lineOne": "Your business doesn't need more ideas.",
-    "lineTwoPrefix": "It needs",
+    "lineOne": "Companies don't fail for lack of talent.",
+    "lineTwoPrefix": "They fail without",
     "highlight": "structure",
-    "button": "What we build",
-    "microcopy": "From scattered ideas to scalable systems."
+    "button": "The three layers",
+    "microcopy": "Structure first. Growth after."
   },
   "services": {
-    "eyebrow": "What MAIA builds",
-    "title": "What MAIA builds",
-    "description": "We do not make brands just to look good. We build structures so a business can understand itself, communicate clearly and grow with direction.",
+    "eyebrow": "The three layers",
+    "title": "An organization is built in layers.",
+    "description": "Three disciplines that cannot function in isolation. A brand without structure doesn't scale. An operation without identity doesn't connect. And technology without direction only creates complexity.",
     "items": [
-      { "title": "Brand systems", "description": "Positioning, visual identity, narrative and strategic presence so the brand stops looking generic.", "icon": "orbit" },
-      { "title": "Business architecture", "description": "Offer, processes, commercial structure and internal clarity so the business works with intention.", "icon": "blocks" },
-      { "title": "Growth systems", "description": "Automation, content, CRM, funnels and technology to scale without depending on improvisation.", "icon": "workflow" }
+      {
+        "number": "01",
+        "title": "Business Architecture",
+        "description": "We design your organization's internal structure: offer, processes, business model and operating systems so growth has something to stand on.",
+        "pillars": ["Business model", "Operating structure", "Offer architecture", "Organizational clarity"],
+        "icon": "blocks"
+      },
+      {
+        "number": "02",
+        "title": "Brand Strategy",
+        "description": "We build the brand system that makes your organization recognizable, relevant and remembered. Positioning, identity, narrative and strategic presence.",
+        "pillars": ["Positioning", "Visual identity", "Strategic narrative", "Brand communication"],
+        "icon": "orbit"
+      },
+      {
+        "number": "03",
+        "title": "Growth Systems",
+        "description": "We implement the technological systems that allow you to scale with intention: automation, CRM, funnels, strategic content and growth metrics.",
+        "pillars": ["Automation", "CRM & funnels", "Strategic content", "Scale metrics"],
+        "icon": "workflow"
+      }
     ]
   },
   "method": {
     "eyebrow": "Proprietary method",
     "title": "MAIA Growth Architecture™",
-    "description": "A method for turning scattered brands into clear, memorable and scalable systems.",
+    "description": "We don't start with execution. We start with understanding. Four phases that turn scattered organizations into systems that scale.",
     "steps": [
-      { "phase": "Decode", "title": "Decode", "description": "We analyze brand, business, audience, perception, offer and friction points." },
-      { "phase": "Design", "title": "Design", "description": "We build identity, narrative, visual experience, commercial architecture and value proposition." },
-      { "phase": "Deploy", "title": "Deploy", "description": "We take strategy into web, content, automation, CRM and digital assets." },
-      { "phase": "Scale", "title": "Scale", "description": "We measure, optimize and turn structure into sustainable growth." }
+      {
+        "phase": "Decode",
+        "title": "Decode",
+        "description": "We analyze the organization in depth: brand, offer, processes, audience, perception and friction points. Without honest diagnosis, there is no real strategy."
+      },
+      {
+        "phase": "Design",
+        "title": "Design",
+        "description": "We build the complete architecture: identity, narrative, commercial structure and operating model. Everything connected. Everything with purpose."
+      },
+      {
+        "phase": "Deploy",
+        "title": "Deploy",
+        "description": "We bring strategy into reality: web, content, automation, CRM and digital assets. Execution is as important as vision."
+      },
+      {
+        "phase": "Scale",
+        "title": "Scale",
+        "description": "We measure, optimize and turn structure into sustainable growth. We don't build for a moment. We build for the next decade."
+      }
     ]
   },
   "portfolio": {
     "eyebrow": "Selected Work",
     "title": "Selected work",
-    "description": "Projects where strategy becomes structure, brand and system.",
+    "description": "Organizations where strategy becomes structure, identity and system.",
     "cta": "View case",
     "resultLabel": "Result",
     "cases": [
-      { "slug": "bet", "name": "BET", "category": "Medical branding / brand architecture", "description": "Identity, narrative and strategic presence for a company specialized in internal prosthetics.", "services": ["Branding", "Positioning", "Identity", "Strategic communication"], "result": "A clearer, more professional and trustworthy brand for a technical and sensitive market." },
-      { "slug": "orbit-nexus", "name": "Orbit Nexus", "category": "SaaS / business architecture / growth systems", "description": "Conceptual and structural design of a B2B platform for consulting, talent management, KPIs, projects and operational intelligence.", "services": ["Business Architecture", "UX Strategy", "SaaS Concept", "Growth Systems", "AI Matching"], "result": "A scalable system designed to transform operations, talent allocation and decision-making." },
-      { "slug": "suut", "name": "SUUT", "category": "Technical company / digital presence / commercial structure", "description": "Digital presence and communication structure for a company selling, servicing and maintaining power generation equipment.", "services": ["Digital strategy", "Commercial communication", "Brand structure", "Growth Systems"], "result": "A more professional presence to communicate trust, technical capability and service." }
+      {
+        "slug": "bet",
+        "name": "BET",
+        "category": "Medical brand architecture",
+        "description": "Identity, narrative and strategic presence for a company specialized in internal prosthetics.",
+        "services": ["Branding", "Positioning", "Identity", "Strategic communication"],
+        "result": "A clearer, more professional and trustworthy brand for a technical and sensitive market."
+      },
+      {
+        "slug": "orbit-nexus",
+        "name": "Orbit Nexus",
+        "category": "SaaS · Business Architecture · Growth Systems",
+        "description": "Conceptual and structural design of a B2B platform for talent management, KPIs, projects and operational intelligence.",
+        "services": ["Business Architecture", "UX Strategy", "SaaS Concept", "Growth Systems", "AI Matching"],
+        "result": "A scalable system designed to transform operations, talent allocation and decision-making."
+      },
+      {
+        "slug": "suut",
+        "name": "SUUT",
+        "category": "Digital presence · Commercial structure",
+        "description": "Digital presence and communication structure for a company selling, servicing and maintaining power generation equipment.",
+        "services": ["Digital strategy", "Commercial communication", "Brand structure", "Growth Systems"],
+        "result": "A more professional presence to communicate trust, technical capability and service."
+      }
     ]
   },
   "offSociety": {
     "label": "MAIA Community Layer",
     "title": "MAIA OFF Society",
-    "primaryText": "For those building something big while trying to understand themselves.",
+    "primaryText": "For those building something great while trying to understand themselves.",
     "secondaryText": "Ideas, signals and conversations for a generation that learned to look well before feeling well.",
     "cta": "Step Inside",
     "nextCta": "Next Signal",
@@ -92,12 +147,30 @@
     "signalLabel": "OFF Signal",
     "signalCaption": "Move slowly. Each signal is designed to stay for a moment.",
     "signals": [
-      { "title": "It looks good… but it feels OFF.", "text": "Some people seem to be moving all the time… and still feel that something does not connect." },
-      { "title": "Productivity without direction is also exhausting.", "text": "Not all exhaustion comes from work. Sometimes it comes from building without clarity." },
-      { "title": "You are not behind. You are saturated.", "text": "We live exposed to too many lives, too many goals and too much pressure at once." },
-      { "title": "The problem is not always lack of talent.", "text": "Sometimes it is too much noise, comparison and impossible expectations to sustain." },
-      { "title": "OFF does not always mean lost.", "text": "Sometimes it means you can no longer keep growing from inertia." },
-      { "title": "Building should also feel like yours.", "text": "MAIA OFF Society exists for those who want to grow without losing themselves in the process." }
+      {
+        "title": "It looks good… but it feels OFF.",
+        "text": "Some people seem to be moving all the time… and still feel that something does not connect."
+      },
+      {
+        "title": "Productivity without direction is also exhausting.",
+        "text": "Not all exhaustion comes from work. Sometimes it comes from building without clarity."
+      },
+      {
+        "title": "You are not behind. You are saturated.",
+        "text": "We live exposed to too many lives, too many goals and too much pressure at once."
+      },
+      {
+        "title": "The problem is not always lack of talent.",
+        "text": "Sometimes it is too much noise, comparison and impossible expectations to sustain."
+      },
+      {
+        "title": "OFF does not always mean lost.",
+        "text": "Sometimes it means you can no longer keep growing from inertia."
+      },
+      {
+        "title": "Building should also feel like yours.",
+        "text": "MAIA OFF Society exists for those who want to grow without losing themselves in the process."
+      }
     ],
     "join": {
       "label": "Private Signal",
@@ -118,25 +191,33 @@
   },
   "whyMaia": {
     "eyebrow": "Why MAIA",
-    "title": "Why MAIA",
-    "statement": "A pretty brand gets attention. A strategic brand builds power.",
-    "items": [
-      { "title": "Not only branding", "description": "Because visual identity without structure only disguises the problem." },
-      { "title": "Not only marketing", "description": "Because growth without direction turns communication into noise." },
-      { "title": "Not only technology", "description": "Because automation without strategy only accelerates disorder." },
-      { "title": "Complete system", "description": "MAIA connects brand, business and growth to build clearer, more memorable and scalable companies." }
-    ]
+    "title": "The companies of the future will not be built like those of the past.",
+    "paragraphs": [
+      "The world changed. Markets move faster, technology advances without stopping and the rules that defined success for decades are no longer the same.",
+      "Yet most companies are still trying to grow with structures that were not designed for this environment. Disconnected processes. Teams without alignment. Brands that promise one thing while the operation delivers another.",
+      "The consequence is not always visible failure. It is something more silent: an organization that appears to work from the outside, but loses speed, efficiency and growth capacity from within.",
+      "MAIA was built to solve that. We don't sell isolated services. We design complete systems. We don't optimize departments. We design organizations. We don't build tools. We build infrastructure for growth.",
+      "Because the best Latin American companies of the next decade don't exist yet. And we want to help build them."
+    ],
+    "statement": "We don't want to become a well-known company. We want to become a necessary one.",
+    "cta": "Explore how we work"
   },
   "contact": {
-    "eyebrow": "Contact",
-    "title": "Let us build something with direction.",
-    "description": "Tell us what you are building and where you need clarity, structure or growth.",
-    "fields": { "name": "Name", "company": "Company", "email": "Email", "service": "Service of interest", "message": "Message" },
-    "services": ["Branding", "Business Architecture", "Growth Systems", "Integrated project", "Other"],
-    "submit": "Send inquiry",
+    "eyebrow": "Let's begin",
+    "title": "If you are building something worth lasting.",
+    "description": "Tell us what you are building and where you need clarity, structure or growth. The first step is an honest conversation.",
+    "fields": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "service": "Area of interest",
+      "message": "Tell us about your organization"
+    },
+    "services": ["Business Architecture", "Brand Strategy", "Growth Systems", "Integrated project", "Other"],
+    "submit": "Start a conversation",
     "sending": "Sending...",
-    "success": "Inquiry sent. MAIA will respond with the next step.",
-    "error": "The inquiry could not be sent. Check the server configuration.",
-    "selectPlaceholder": "Select one"
+    "success": "Request received. MAIA will respond with the next step.",
+    "error": "The request could not be sent. Check the server configuration.",
+    "selectPlaceholder": "Select an area"
   }
 }
